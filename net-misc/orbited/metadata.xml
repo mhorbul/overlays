@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+    <herd>python</herd>
+    <maintainer>
+        <email>u.alberton@gmail.com</email>
+        <name>Ubiratan Pires Alberton</name>
+    </maintainer>
+    <longdescription lang="en">
+      Orbited provides a pure JavaScript/HTML socket in the browser. 
+      It is a web router and firewall that allows you to integrate 
+      web applications with arbitrary back-end systems. 
+      You can implement any network protocol in the browser—
+      without resorting to plugins.
+    </longdescription>
+</pkgmetadata>
