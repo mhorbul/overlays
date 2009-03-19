@@ -14,9 +14,16 @@ KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND="dev-python/twisted
-        dev-python/setuptools"
+        dev-python/setuptools
+		>=dev-python/morbid-0.8.4
+		dev-python/demjson
+		dev-python/stomper
+		>=dev-python/uuid-1.2"
 RDEPEND="${DEPEND}"
 
 src_install() {
 	distutils_src_install
+	mkdir -p ${D}/etc
+	cp ${FILESDIR}/${PV}/orbited.cfg ${D}/etc/orbited.cfg || die "couldn't create config file"
+	newinitd ${FILESDIR}/${PV}/orbited.init orbited
 }
