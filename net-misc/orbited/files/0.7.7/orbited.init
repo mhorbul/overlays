@@ -18,9 +18,10 @@ start() {
     checkconfig || return 1
 	ebegin "Starting orbited..."
 	/usr/bin/orbited --config=/etc/orbited.cfg >/dev/null 2>&1 &
+	res=$?
 	pid=$!
 	echo $pid > /var/run/orbited.pid
-	eend $?
+	eend $res
 }
 
 stop() {
